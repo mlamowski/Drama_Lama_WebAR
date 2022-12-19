@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Drama Lama</title>
+  <!--
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'/>
+  -->
+  <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@090b5f8f0abe949ddcfdbbc14c75822322a2dd53/dist/aframe-master.min.js"></script>
+</head>
+<body>
+  <a-scene vr-mode-ui="enabled: false" arjs='sourceType: webcam;'>
+    <a-marker type='pattern' url='src/marker/0001.patt' id='marker-1'>
+      <a-video src='src/videos/0001.mp4' id='video-1'></a-video>
+      <!-- <a-obj-model src='0001.gltf'></a-obj-model> -->
+    </a-marker>
+    <!--
+    <a-marker type='pattern' url='pattern-marker-2.patt' id='marker-2'>
+      <a-video src='video-2.mp4' id='video-2'></a-video>
+      <a-obj-model src='model-2.obj'></a-obj-model>
+    </a-marker>
+    <a-marker type='pattern' url='pattern-marker-3.patt' id='marker-3'>
+      <a-video src='video-3.mp4' id='video-3'></a-video>
+      <a-obj-model src='model-3.obj'></a-obj-model>
+    </a-marker>
+    -->
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
+<!--
+<script>
+
+  document.querySelectorAll('a-video').forEach(video => {
+    video.addEventListener('click', event => {
+      event.target.components.material.material.map.image.play();
+    });
+  });
+
+  document.querySelectorAll('a-marker').forEach(marker => {
+    marker.addEventListener('markerFound', event => {
+      event.target.querySelector('a-video').components.material.material.map.image.currentTime = 0;
+    });
+  });
+
+
+</script>
+-->
+
+
+</html>
